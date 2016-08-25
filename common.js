@@ -17,7 +17,8 @@ module.exports = class deco extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      tip: false
+      tip: false,
+      tip_image: false
     };
   }
 
@@ -26,6 +27,7 @@ module.exports = class deco extends Component {
       return (
         <View style={styles.container}>
           <Text>Tip of the day : {this.state.tip} </Text>
+          <Image source={{uri: this.state.tip_image }} style={{width: 100, height: 80}}/>
         </View>
       )
     } else {
